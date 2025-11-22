@@ -1,9 +1,8 @@
 // --- PASTE YOUR DEPLOYED GOOGLE APPS SCRIPT URL HERE ---
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx2cf39XLv-kCMtt8YfKHXZ9CBpiI7AKMdXFeNkI7lEfYImWzWdTF5QiAWZelexD_5s/exec'; 
 
-// --- DATA ---
 const programs = [
-    // Graduate School
+   // Graduate School
     "Doctor of Philosophy Major in Technology Education Management",
     "Master of Arts in Language and Literacy Education",
     "Master of Arts in Education",
@@ -49,7 +48,7 @@ const programLogos = {
     'College of Technology': 'Logos/tech.png'
 };
 
-// --- DOM ELEMENTS ---
+// Elements
 const form = document.getElementById('yearbook-form');
 const programSelect = document.getElementById('program');
 const programLogo = document.getElementById('program-logo');
@@ -64,11 +63,7 @@ const reviewContainer = document.getElementById('review-container');
 const reviewContent = document.getElementById('review-content');
 const formContainer = document.getElementById('form-container');
 
-// --- LOGIC ---
-
-let formData = {};
-
-// 1. Character Counter
+// Character Counter
 const principleInput = document.getElementById('guidingPrinciple');
 const currentCount = document.getElementById('current-count');
 
@@ -78,14 +73,14 @@ principleInput.addEventListener('input', (e) => {
     currentCount.style.color = len >= 190 ? "#d32f2f" : "#888";
 });
 
-// 2. Auto-Capitalize on Blur
+// Auto-Capitalize
 ['fullName', 'fathersName', 'mothersName', 'spousesName'].forEach(id => {
     document.getElementById(id).addEventListener('blur', (e) => {
         e.target.value = smartCapitalize(e.target.value);
     });
 });
 
-// 3. Core Functions
+// Core Functions
 function getCollegeCategory(programName) {
     if (!programName) return 'Default';
     if (programName.includes("Doctor") || programName.includes("Master")) return "Graduate School";
@@ -187,7 +182,7 @@ function showReviewPanel() {
     });
 
     formContainer.style.display = 'none'; 
-    reviewContainer.style.display = 'grid'; /* Fix for review panel grid */
+    reviewContainer.style.display = 'grid'; 
     window.scrollTo(0, 0);
 }
 
