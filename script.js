@@ -1,15 +1,18 @@
 // --- PASTE YOUR DEPLOYED GOOGLE APPS SCRIPT URL HERE ---
-const GOOGLE_SCRIPT_URL = 'YOUR_LATEST_GOOGLE_SCRIPT_URL_HERE'; 
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx2cf39XLv-kCMtt8YfKHXZ9CBpiI7AKMdXFeNkI7lEfYImWzWdTF5QiAWZelexD_5s/exec'; 
 
 // --- DATA ---
 const programs = [
+    // Graduate School
     "Doctor of Philosophy Major in Technology Education Management",
-    "Master of Arts in Language and Literature Education",
+    "Master of Arts in Language and Literacy Education",
     "Master of Arts in Education",
     "Master in Technician Education",
+    // COLLEGE OF ENGINEERING
     "Bachelor of Science in Mechanical Engineering",
     "Bachelor of Science in Electrical Engineering",
     "Bachelor of Science in Industrial Engineering",
+    // COLLEGE OF EDUCATION ARTS AND SCIENCES
     "Bachelor of Secondary Education Major in English, SECTION A",
     "Bachelor of Secondary Education Major in English, SECTION B",
     "Bachelor of Secondary Education Major in Mathematics",
@@ -17,14 +20,16 @@ const programs = [
     "Bachelor of Secondary Education Major in Filipino",
     "Bachelor of Technical-Vocational Teacher Education Major in Automotive Technology",
     "Bachelor of Technical-Vocational Teacher Education Major in Electronics Technology",
-    "Bachelor of Technical-Vocational Teacher Education Major in Food and Services Management",
+    "Bachelor of Technical-Vocational Teacher Education Major in Food and Service Management",
     "Bachelor of Technical-Vocational Teacher Education Major in Garments, Fashion and Design",
+    // COLLEGE OF TECHNOLOGY
     "Bachelor in Food Processing and Service Technology",
     "Bachelor of Industrial Technology (BIT, SECTION A)",
     "Bachelor of Industrial Technology (BIT, SECTION B)",
     "Bachelor of Industrial Technology (BIT, SECTION C)",
     "Diploma in Automotive Technology",
     "Diploma in Civil Technology",
+    "Diploma in Electrical Technology",
     "Diploma in Electronics Technology",
     "Diploma in Heating, Ventilating & Air-conditioning Technology",
     "Diploma in Mechanical Technology",
