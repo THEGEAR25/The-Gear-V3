@@ -1,4 +1,4 @@
-// --- PASTE YOUR DEPLOYED GOOGLE APPS SCRIPT URL HERE ---
+// --- Here ibutang ang Google app script ---
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx2cf39XLv-kCMtt8YfKHXZ9CBpiI7AKMdXFeNkI7lEfYImWzWdTF5QiAWZelexD_5s/exec'; 
 
 const programs = [
