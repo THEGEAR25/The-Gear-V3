@@ -63,7 +63,7 @@ const reviewContainer = document.getElementById('review-container');
 const reviewContent = document.getElementById('review-content');
 const formContainer = document.getElementById('form-container');
 
-// Character Counter
+// Character Counter Logic
 const principleInput = document.getElementById('guidingPrinciple');
 const currentCount = document.getElementById('current-count');
 
@@ -73,7 +73,7 @@ principleInput.addEventListener('input', (e) => {
     currentCount.style.color = len >= 190 ? "#d32f2f" : "#888";
 });
 
-// Auto-Capitalize
+// Auto-Capitalize on Blur
 ['fullName', 'fathersName', 'mothersName', 'spousesName'].forEach(id => {
     document.getElementById(id).addEventListener('blur', (e) => {
         e.target.value = smartCapitalize(e.target.value);
@@ -149,7 +149,7 @@ function updateDays() {
     if (selectedDay <= daysInMonth) daySelect.value = selectedDay;
 }
 
-// 4. Review Panel Logic
+// Review Panel Logic
 function showReviewPanel() {
     const data = new FormData(form);
     reviewContent.innerHTML = '';
@@ -186,7 +186,7 @@ function showReviewPanel() {
     window.scrollTo(0, 0);
 }
 
-// 5. Submit Logic
+// Submit Logic
 async function confirmAndSubmit() {
     loader.style.display = 'block';
     try {
@@ -220,7 +220,7 @@ async function confirmAndSubmit() {
     }
 }
 
-// 6. Listeners
+// Listeners
 document.addEventListener('DOMContentLoaded', () => {
     populatePrograms();
     populateBirthday();
