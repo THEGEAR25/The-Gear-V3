@@ -42,10 +42,10 @@ const programs = [
 ];
 
 const programLogos = {
-    'Graduate School': 'Logos/grad.png',
-    'College of Engineering': 'Logos/eng.png',
-    'College of Education, Arts, and Sciences': 'Logos/edu.png',
-    'College of Technology': 'Logos/tech.png'
+    'Graduate School': 'Logos/grad.webp',
+    'College of Engineering': 'Logos/eng.Webp',
+    'College of Education, Arts, and Sciences': 'Logos/edu.webp',
+    'College of Technology': 'Logos/tech.webp'
 };
 
 // Elements
@@ -73,10 +73,25 @@ principleInput.addEventListener('input', (e) => {
     currentCount.style.color = len >= 190 ? "#d32f2f" : "#888";
 });
 
-// Auto-Capitalize on Blur
-['fullName', 'fathersName', 'mothersName', 'spousesName'].forEach(id => {
-    document.getElementById(id).addEventListener('blur', (e) => {
-        e.target.value = smartCapitalize(e.target.value);
+// --- NEW: Disable Right Click for Security ---
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+// --- UPDATE: Auto-Capitalize AND Whitespace Trimmer ---
+const textInputs = document.querySelectorAll('input[type="text"], textarea');
+
+textInputs.forEach(input => {
+    input.addEventListener('blur', (e) => {
+        // 1. Trim Whitespace
+        let val = e.target.value.trim(); 
+        
+        // 2. Apply Smart Capitalization (if it's a name field)
+        const id = e.target.id;
+        if (['fullName', 'fathersName', 'mothersName', 'spousesName'].includes(id)) {
+            val = smartCapitalize(val);
+        }
+        
+        // Update value
+        e.target.value = val;
     });
 });
 
