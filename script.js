@@ -43,7 +43,7 @@ const programs = [
 
 const programLogos = {
     'Graduate School': 'Logos/grad.webp',
-    'College of Engineering': 'Logos/eng.Webp',
+    'College of Engineering': 'Logos/eng.webp',
     'College of Education, Arts, and Sciences': 'Logos/edu.webp',
     'College of Technology': 'Logos/tech.webp'
 };
